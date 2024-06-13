@@ -1,0 +1,12 @@
+#testing {
+display: flex;
+justify-content: center; /*cetners horizontally */
+height: 170px;
+align-items: center; /* centers vertically */
+font-size: 58px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.box1 {
+    display: flex;
+    background-color: aqua;
+}
