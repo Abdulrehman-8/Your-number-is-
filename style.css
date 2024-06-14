@@ -6,6 +6,7 @@
    font-size: 58px;
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+/* Here we apply the properties to the boxes so we can adjust the width, height, etc */
 .box1 {
     width: 120px;
     height: 120px;
@@ -28,7 +29,7 @@
     text-align: center; 
 }
 
-/* So here, We apply flexbox property, the content is centered and there is gap of 4px.. flexbox arranges the child items of a parent div to be arranged in main (x) axis which can be changed and their settings can be modified easily. */
+/* So here, We apply flexbox property. The content is centered and there is gap of 4px.. flexbox arranges the child items of a parent div to be arranged in main (x) axis which can be changed and their settings can be modified easily. */
 #box1-4 {
     display: flex;
     justify-content: center; 
