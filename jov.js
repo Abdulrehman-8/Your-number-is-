@@ -1,5 +1,5 @@
 //Attemping to add reactive number.
-let randumNum = Math.floor(Math.random() * (24 - 5) + 5) /* So here, we use this to get a random numbre.. kind of saw this online but works. */
+let randumNum = Math.floor(Math.random() * (26 - 12) + 12) /* So here, we use this to get a random numbre.. kind of saw this online but works. */
 let joem = document.getElementById('testing');
 joem.textContent = `Your number is: ${randumNum}`;
 let firstBox = document.getElementById("box1");
@@ -11,18 +11,13 @@ let sixthBox = document.getElementById("box6");
 let seventhBox = document.getElementById("box7");
 let eighthBox = document.getElementById("box8");
 let ninthBox = document.getElementById("box9");
-let tenthBox = document.getElementById("box10");
-let eleventhBox = document.getElementById("box11");
-let twelfthBox = document.getElementById("box12");
-firstBox.textContent = `${Math.floor(Math.random() * (13 - 2) + 2)}`
-secondBox.textContent = `${Math.floor(Math.random() * (13 - 2) + 2)}`
-thirdBox.textContent = `${Math.floor(Math.random() * (13 - 2) + 2)}`
-fourthBox.textContent = `${Math.floor(Math.random() * (13 - 2) + 2)}`
-fifthBox.textContent = `${Math.floor(Math.random() * (13 - 2) + 2)}`
-sixthBox.textContent = `${Math.floor(Math.random() * (13 - 2) + 2)}`
-seventhBox.textContent = `${Math.floor(Math.random() * (13 - 2) + 2)}`
-eighthBox.textContent = `${Math.floor(Math.random() * (13 - 2) + 2)}`
-ninthBox.textContent = `${Math.floor(Math.random() * (13 - 2) + 2)}`
-tenthBox.textContent = `${Math.floor(Math.random() * (13 - 2) + 2)}`
-eleventhBox.textContent = `${Math.floor(Math.random() * (13 - 2) + 2)}`
-twelfthBox.textContent = `${Math.floor(Math.random() * (13 - 2) + 2)}`
+firstBox.textContent = `${Math.floor(Math.random() * (11 - 2) + 2)}`
+secondBox.textContent = `${Math.floor(Math.random() * (11 - 2) + 2)}`
+thirdBox.textContent = `${Math.floor(Math.random() * (11 - 2) + 2)}`
+fourthBox.textContent = `${Math.floor(Math.random() * (11 - 2) + 2)}`
+fifthBox.textContent = `${Math.floor(Math.random() * (11 - 2) + 2)}`
+sixthBox.textContent = `${Math.floor(Math.random() * (11 - 2) + 2)}`
+seventhBox.textContent = `${Math.floor(Math.random() * (11 - 2) + 2)}`
+eighthBox.textContent = `${Math.floor(Math.random() * (11 - 2) + 2)}`
+ninthBox.textContent = `${Math.floor(Math.random() * (11 - 2) + 2)}`
+//create array maybe to organize this code (and practice)?

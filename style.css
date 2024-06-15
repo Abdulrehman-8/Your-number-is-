@@ -31,17 +31,17 @@
 }
 
 /* So here, We apply flexbox property. The content is centered and there is gap of 4px.. flexbox arranges the child items of a parent div to be arranged in main (x) axis which can be changed and their settings can be modified easily. */
-#box1-4 {
+#box1-3 {
     display: flex;
     justify-content: center; 
     gap: 4px;
 }
-#box5-8 {
+#box4-6 {
     display: flex;
     justify-content: center; 
     gap: 4px;
 }
-#box9-12 {
+#box7-9 {
     display: flex;
     justify-content: center; 
     gap: 4px;
@@ -52,36 +52,27 @@
     background-color: rgb(255, 0, 0);
 }
 #box2 {
-    background-color: rgb(255, 51, 0);
+    background-color: rgb(255, 0, 0);
 }
 #box3 {
-    background-color: rgb(255, 132, 0);
+    background-color: rgb(255, 0, 0);
 }
 #box4 {
-    background-color: rgb(239, 231, 9);
+    background-color: rgb(255, 0, 0);
 }
 #box5 {
-    background-color: rgb(149, 255, 0);
+    background-color: rgb(255, 0, 0);
 }
 #box6 {
-    background-color: rgb(43, 255, 0);
+    background-color: rgb(255, 0, 0);
 }
 #box7 {
-    background-color: rgb(0, 255, 132);
+    background-color: rgb(255, 0, 0);
 }
 #box8 {
-    background-color: rgb(0, 34, 255);
+    background-color: rgb(255, 0, 0);
 }
 #box9 {
-    background-color: rgb(247, 0, 255);
-}
-#box10 {
-    background-color: rgb(255, 0, 89);
-}
-#box11 {
-    background-color: rgb(0, 255, 251);
-}
-#box12 {
     background-color: rgb(255, 0, 0);
 }
 #darkMode {
