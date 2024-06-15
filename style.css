@@ -1,4 +1,5 @@
 #testing {
+    color: azure;
    display: flex;
    justify-content: center; /*cetners horizontally */
    height: 170px;
@@ -57,7 +58,7 @@
     background-color: rgb(255, 132, 0);
 }
 #box4 {
-    background-color: rgb(255, 230, 0);
+    background-color: rgb(239, 231, 9);
 }
 #box5 {
     background-color: rgb(149, 255, 0);
@@ -82,4 +83,10 @@
 }
 #box12 {
     background-color: rgb(255, 0, 0);
+}
+#darkMode {
+    background-color: rgba(17, 16, 16, 0.925);
+}
+.boxContainer{
+    color: snow
 }
