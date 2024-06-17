@@ -12,21 +12,21 @@
     width: 120px;
     height: 120px;
     font-size: 6em;
-    border-radius: 8px; 
+    border-radius: 7px; 
     text-align: center; 
 }
 .box2 {
     width: 120px;
     height: 120px;
     font-size: 6em;
-    border-radius: 8px; 
+    border-radius: 7px; 
     text-align: center; 
 }
 .box3 {
     width: 120px;
     height: 120px;
     font-size: 6em;
-    border-radius: 8px; 
+    border-radius: 7px; 
     text-align: center; 
 }
 
@@ -80,4 +80,8 @@
 }
 .boxContainer{
     color: snow
+}
+.changes {
+    height: 4px;
+    
 }
