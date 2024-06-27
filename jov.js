@@ -19,7 +19,7 @@ let randomerNum;
 
 let randumNum;/* So here, we use this to get a random numbre.. kind of saw this online but works. */
  let catcher
-function fixerall() {
+function fixerall() { // Assigns the random numbers, and thier sum (answer)
     randomerNum = Math.floor(Math.random() * (22 - 3) + 3);
     randumNum = Math.floor(Math.random() * (22 - 3) + 3);
     joem.textContent = `Your number is: ${randumNum} + ${randomerNum}`;
@@ -88,9 +88,20 @@ switch (val) { //assigning the value of sum of addition to random tiles!
                  break;    
 }};
 assigner(int)
-    
+
 let container = document.getElementById("boxContainer");
 let Restart = document.getElementById("again");
+Restart.addEventListener("click", (e) => {
+    fixerall();
+    chiefAssigner();
+    repDecliner();
+    let wint = Math.floor(Math.random() * (9 - 1) + 1);
+    assigner(wint);
+    lost.style.height = "0px";
+    lost.style.fontSize = "0px"
+    lost.textContent = ""
+    
+})
 for (let obj of obj1) {
     obj.addEventListener("click", (e) => {
         if (obj.textContent == catcher) {
@@ -109,7 +120,10 @@ for (let obj of obj1) {
             lost.style.alignItems = "center";
             lost.style.fontSize = "58px";
             lost.style.fontFamily = " 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif";
-            container.textContent = " ", joem.textContent = " ";
+            joem.textContent = " "
+            for (let obje of obj1) {
+                obje.textContent = ""
+            }
         }
     })
 }
