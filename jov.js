@@ -14,16 +14,22 @@ const score = document.getElementById("score");
 score.textContent = `Score is: ${0}`;
 let lost = document.getElementById("lost");
 let joem = document.getElementById('testing');
+const clickableElement = document.querySelector('.clickable-element');
 
 let randomerNum;
 
 let randumNum;/* So here, we use this to get a random numbre.. kind of saw this online but works. */
- let catcher
+let catcher;
+function numberDespawner(target, delay) {
+    setTimeout(() => {
+    target.classList.add("hidden")
+    }, delay)
+}
 function fixerall() { // Assigns the random numbers, and thier sum (answer)
     randomerNum = Math.floor(Math.random() * (22 - 3) + 3);
     randumNum = Math.floor(Math.random() * (22 - 3) + 3);
     joem.textContent = `Your number is: ${randumNum} + ${randomerNum}`;
-    catcher = randomerNum + randumNum
+    catcher = randomerNum + randumNum;
 }
 fixerall();
 
@@ -32,7 +38,6 @@ for (objs of obj1) { //assigning values to the tiles
     objs.textContent = `${Math.floor(Math.random() * (43 - 5) + 5)}`
 }}
 chiefAssigner();
- //capturing answer of addition
 
 let int = Math.floor(Math.random() * (9 - 1) + 1);
 function repDecliner() {
@@ -55,7 +60,7 @@ if (obj1[0].textContent == catcher) { //checking for repetitive answers on tiles
 }else if (obj1[8].textContent == catcher) {
     obj1[8].textContent = 5
 }}
-repDecliner()
+repDecliner();
 
 function assigner(val) {
 switch (val) { //assigning the value of sum of addition to random tiles!
@@ -87,10 +92,10 @@ switch (val) { //assigning the value of sum of addition to random tiles!
                  obj1[8].textContent = catcher;
                  break;    
 }};
-assigner(int)
+assigner(int);
 
 let container = document.getElementById("boxContainer");
-let Restart = document.getElementById("again");
+let Restart = document.getElementById("again");//the restart button
 Restart.addEventListener("click", (e) => {
     fixerall();
     chiefAssigner();
@@ -100,17 +105,26 @@ Restart.addEventListener("click", (e) => {
     lost.style.height = "0px";
     lost.style.fontSize = "0px"
     lost.textContent = ""
-    
+    score.textContent= "Score is: 0";
+    for (let objes of obj1) {
+    objes.classList.remove("hidden")};
 })
+function adder(x) { //to add score
+    x = 1
+    return x++;
+}
+let integer = 0;
 for (let obj of obj1) {
     obj.addEventListener("click", (e) => {
-        if (obj.textContent == catcher) {
-            fixerall();
-            chiefAssigner();
-            repDecliner();
-            let wint = Math.floor(Math.random() * (9 - 1) + 1);
-            assigner(wint);
-            score.textContent = `Score is: ${+1}`
+        if (obj.textContent == catcher) { 
+            fixerall(); //assings random numbers and answers.
+            chiefAssigner(); //assings values to tiles.
+            repDecliner(); //prevents answer spawning more than once.
+            let wint = Math.floor(Math.random() * (9 - 1) + 1); //randomize answers on tiles.
+            assigner(wint); //assigns the value of answer.
+            integer += 1;
+            score.textContent = `Score is: ` + integer;
+            numberDespawner(obj, 3500);
         } else {
             lost.textContent = "You have lost! Restart?";
             lost.style.color = "azure";
