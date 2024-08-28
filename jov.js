@@ -14,15 +14,14 @@ const score = document.getElementById("score");
 score.textContent = `Score is: ${0}`;
 let lost = document.getElementById("lost");
 let joem = document.getElementById('testing');
-const clickableElement = document.querySelector('.clickable-element');
-
 let randomerNum;
 
-let randumNum;/* So here, we use this to get a random numbre.. kind of saw this online but works. */
+let randumNum;/* So here, we use this to get a random number.. kind of saw this online but works. */
 let catcher;
+
 function numberDespawner(target, delay) {
     setTimeout(() => {
-    target.classList.add("hidden")
+    target.classList.add("hidden") //hidden makes font size 0, This hides the characters after the countdown.
     }, delay)
 }
 function fixerall() { // Assigns the random numbers, and thier sum (answer)
@@ -94,9 +93,17 @@ switch (val) { //assigning the value of sum of addition to random tiles!
 }};
 assigner(int);
 
+function timeToDespawn() {
+    for (let obj of obj1) {
+        numberDespawner(obj, 3500);
+    }
+}
+
 let container = document.getElementById("boxContainer");
 let Restart = document.getElementById("again");//the restart button
 Restart.addEventListener("click", (e) => {
+    for (let obj of obj1) {
+        obj.classList.remove("hidden")}  
     fixerall();
     chiefAssigner();
     repDecliner();
@@ -106,17 +113,19 @@ Restart.addEventListener("click", (e) => {
     lost.style.fontSize = "0px"
     lost.textContent = ""
     score.textContent= "Score is: 0";
-    for (let objes of obj1) {
-    objes.classList.remove("hidden")};
-})
-function adder(x) { //to add score
-    x = 1
-    return x++;
-}
+    })
+
 let integer = 0;
 for (let obj of obj1) {
     obj.addEventListener("click", (e) => {
-        if (obj.textContent == catcher) { 
+        if (obj.textContent == catcher) {
+            for (let obj of obj1) { //This makes a seperate division for the object, therefore it will apply to all objects, not just the one selected.
+                obj.style.pointerEvents = 'none';
+                obj.classList.remove("hidden");
+                setTimeout(() => {
+                    obj.style.pointerEvents = 'auto';
+                }, 3500);
+            }
             fixerall(); //assings random numbers and answers.
             chiefAssigner(); //assings values to tiles.
             repDecliner(); //prevents answer spawning more than once.
@@ -124,7 +133,7 @@ for (let obj of obj1) {
             assigner(wint); //assigns the value of answer.
             integer += 1;
             score.textContent = `Score is: ` + integer;
-            numberDespawner(obj, 3500);
+            timeToDespawn();
         } else {
             lost.textContent = "You have lost! Restart?";
             lost.style.color = "azure";
@@ -141,3 +150,5 @@ for (let obj of obj1) {
         }
     })
 }
+
+// :0
